@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subscribe to Our Newsletter</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 1rem;
+    }
+
+    .subscription-form {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      animation: fadeIn 1s ease;
+    }
+
+    .subscription-form h2 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .subscription-form p {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .subscription-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .subscription-form input,
+    .subscription-form select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ddd;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .subscription-form input:focus,
+    .subscription-form select:focus {
+      border-color: #6e8efb;
+      outline: none;
+    }
+
+    .subscription-form button {
+      background: #6e8efb;
+      color: white;
+      border: none;
+      padding: 0.9rem;
+      font-size: 1rem;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    .subscription-form button:hover {
+      background: #5a74d6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <form class="subscription-form" action="https://formspree.io/f/mldjpold" method="POST">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Tech's news in your inbox every Friday.</p>
+
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email" required placeholder="you@example.com" />
+
+    <label for="language">Preferred Language</label>
+    <select name="language" id="language" required>
+      <option value="" disabled selected>Select language</option>
+      <option value="English">English</option>
+      <option value="Greek">Greek</option>
+      <option value="Spanish">Spanish</option>
+      <option value="French">French</option>
+    </select>
+
+    <button type="submit">Subscribe</button>
+  </form>
+
+</body>
+</html>
